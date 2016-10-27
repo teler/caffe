@@ -78,13 +78,13 @@ layer {
     obj_norm: true
     image_size_x: 512
     image_size_y: 512
-    crop_bboxes: true
+    crop_bboxes: false
     object_class: { src: 1 dst: 0} # obj class 1 -> cvg index 0
   }
    detectnet_augmentation_param: {
     crop_prob: 1
-    shift_x: 32
-    shift_y: 32
+    shift_x: 15
+    shift_y: 15
     flip_prob: 0.5
     rotation_prob: 0
     max_rotate_degree: 5
@@ -2501,7 +2501,7 @@ layer {
     python_param {
         module: 'caffe.layers.detectnet.clustering'
         layer: 'ClusterDetections'
-        param_str : '512, 512, 16, 0.6, 3, 0.02, 22, 1'
+        param_str : '512, 512, 16, 0.06, 1, 0.02, 9, 1'
     }
     include: { phase: TEST }
 }
