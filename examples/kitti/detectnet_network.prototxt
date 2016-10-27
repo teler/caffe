@@ -54,8 +54,8 @@ layer {
     shape {
       dim: 1
       dim: 3
-      dim: 384
-      dim: 1248
+      dim: 512
+      dim: 512
     }
   }
   include: { phase: TEST not_stage: "val" }
@@ -76,8 +76,8 @@ layer {
     coverage_type: RECTANGULAR
     min_cvg_len: 20
     obj_norm: true
-    image_size_x: 1248
-    image_size_y: 384
+    image_size_x: 512
+    image_size_y: 512
     crop_bboxes: true
     object_class: { src: 1 dst: 0} # obj class 1 -> cvg index 0
   }
@@ -115,8 +115,8 @@ layer {
     coverage_type: RECTANGULAR
     min_cvg_len: 20
     obj_norm: true
-    image_size_x: 1248
-    image_size_y: 384
+    image_size_x: 512
+    image_size_y: 512
     crop_bboxes: false
     object_class: { src: 1 dst: 0} # obj class 1 -> cvg index 0
   }
@@ -2501,7 +2501,7 @@ layer {
     python_param {
         module: 'caffe.layers.detectnet.clustering'
         layer: 'ClusterDetections'
-        param_str : '1248, 352, 16, 0.6, 3, 0.02, 22, 1'
+        param_str : '512, 512, 16, 0.6, 3, 0.02, 22, 1'
     }
     include: { phase: TEST }
 }
@@ -2516,7 +2516,7 @@ layer {
   python_param {
       module: 'caffe.layers.detectnet.clustering'
       layer: 'ClusterGroundtruth'
-      param_str : '1248, 352, 16, 1'
+      param_str : '512, 512, 16, 1'
   }
   include: { phase: TEST stage: "val" }
 }
@@ -2542,7 +2542,7 @@ layer {
     python_param {
         module: 'caffe.layers.detectnet.mean_ap'
         layer: 'mAP'
-        param_str : '1248, 352, 16'
+        param_str : '512, 512, 16'
     }
     include: { phase: TEST stage: "val" }
 }
