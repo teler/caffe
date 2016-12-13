@@ -83,8 +83,8 @@ layer {
   }
    detectnet_augmentation_param: {
     crop_prob: 1
-    shift_x: 15
-    shift_y: 15
+    shift_x: 32
+    shift_y: 32
     flip_prob: 0
     rotation_prob: 0
     max_rotate_degree: 359
