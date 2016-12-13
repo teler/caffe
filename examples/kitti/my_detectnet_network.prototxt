@@ -72,9 +72,9 @@ layer {
   detectnet_groundtruth_param: {
     stride: 8
     scale_cvg: 13
-    gridbox_type: GRIDBOX_MIN
+    gridbox_type: GRIDBOX_MAX
     coverage_type: RECTANGULAR
-    min_cvg_len: 10
+    max_cvg_len: 10
     obj_norm: true
     image_size_x: 256
     image_size_y: 256
@@ -111,9 +111,9 @@ layer {
   detectnet_groundtruth_param: {
     stride: 8
     scale_cvg: 13
-    gridbox_type: GRIDBOX_MIN
+    gridbox_type: GRIDBOX_MAX
     coverage_type: RECTANGULAR
-    min_cvg_len: 10
+    max_cvg_len: 10
     obj_norm: true
     image_size_x: 256
     image_size_y: 256
